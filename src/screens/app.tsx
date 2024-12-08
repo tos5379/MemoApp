@@ -1,9 +1,12 @@
 import { StatusBar } from 'expo-status-bar'
+import { registerRootComponent } from 'expo'
 import { StyleSheet, Text, View } from 'react-native'
+import Hello from '../components/Hello'
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
+      <Hello name={"おうは"}/>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
@@ -18,3 +21,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 })
+registerRootComponent(App)
+
